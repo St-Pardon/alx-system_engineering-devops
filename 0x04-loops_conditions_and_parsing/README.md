@@ -1,5 +1,7 @@
 # 0x04. Loops, conditions and parsing
 
+#DevOps #Shell #Bash #Scripting
+
 ## Objectives
 *At the end of this project, i am expected to be able to [explain to anyone](https://alx-intranet.hbtn.io/rltoken/UnkzDNdH09TFJ0-Y56azyg), without the help of Google:*
 
