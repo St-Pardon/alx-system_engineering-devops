@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Bash script that configures an Ubuntu server with the below requirements
+# localhost resolves to 127.0.0.2
+# facebook.com resolves to 8.8.8.8
+hosts_tmp=~/hosts.new
+cp /etc/hosts "$hosts_tmp"
+sed --quiet -i -E 's/(([0-9]+\.?){4}\slocalhost)/# \1/g' "$hosts_tmp"
+sed --quiet -i -E 's/(([0-9]+\.?){4}\sfacebook)/# \1/g' "$hosts_tmp"
+echo -e "\n# host modifications\n127.0.0.2\tlocalhost\n8.8.8.8\tfacebook.com" >> "$hosts_tmp"
+cp -f "$hosts_tmp" /etc/hosts
