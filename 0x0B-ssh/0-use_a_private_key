@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# ssh to connect to your server using the private key
+ssh -i ~/.ssh/school -o "PasswordAuthentication no" ubuntu@34.232.80.156
