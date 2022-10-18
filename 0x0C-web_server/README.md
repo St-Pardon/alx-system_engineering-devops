@@ -13,7 +13,7 @@ Write a Bash script that transfers a file from our client to a server:
 
 - [x] Accepts 4 parameters
   1. [x] The path to the file to be transferred
-  1. [x] The IP of the server we want to transfer the file to
+77;30407;0c  1. [x] The IP of the server we want to transfer the file to
   1. [x] The username `scp` connects with
   1. [x] The path to the SSH private key that `scp` uses
 - [x] Display `Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY` if less than 3 parameters passed
@@ -22,7 +22,6 @@ Write a Bash script that transfers a file from our client to a server:
 
 
 ### [1. Install nginx web server](./1-install_nginx_web_server)
-![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/01cab59e881e31842b8d47a0974e8d3b6f0f2001.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20221017%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221017T161358Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=5e7b198a6022d095446aed1ac1feb49b7ca3746069dcd12b0315b589958af476)
 
 **Readme:**
 
@@ -34,6 +33,13 @@ Write a Bash script that transfers a file from our client to a server:
 - [x] Install `nginx` on your `web-01` server
 - [x] Nginx should be listening on port 80
 - [x] When querying Nginx at its root `/` with a `GET` request (requesting a page) using `curl`, it must return a page that contains the string `Hello World!`
-- [ ] As an answer file, write a Bash script that configures a new Ubuntu machine to respect above requirements (this script will be run on the server itself)
+- [x] As an answer file, write a Bash script that configures a new Ubuntu machine to respect above requirements (this script will be run on the server itself)
 - [x] You can’t use `systemctl` for restarting `nginx`
 Server terminal:
+
+### [2. Setup a domain name](./2-setup_a_domain_name)
+**Requirement:**
+
+- [ ]provide the domain name only (example: foobar.tech), no subdomain (example: `www.foobar.tech`)
+- [ ] configure your DNS records with an A entry so that your root domain points to your `web-01` IP address **Warning: the propagation of your records can take time (~1-2 hours)**
+- [ ]go to your profile and enter your domain in the `Project website url` field
