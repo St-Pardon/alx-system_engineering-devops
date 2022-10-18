@@ -40,6 +40,18 @@ Server terminal:
 ### [2. Setup a domain name](./2-setup_a_domain_name)
 **Requirement:**
 
-- [ ]provide the domain name only (example: foobar.tech), no subdomain (example: `www.foobar.tech`)
-- [ ] configure your DNS records with an A entry so that your root domain points to your `web-01` IP address **Warning: the propagation of your records can take time (~1-2 hours)**
-- [ ]go to your profile and enter your domain in the `Project website url` field
+- [x] provide the domain name only (example: foobar.tech), no subdomain (example: `www.foobar.tech`)
+- [x] configure your DNS records with an A entry so that your root domain points to your `web-01` IP address **Warning: the propagation of your records can take time (~1-2 hours)**
+- [x] go to your profile and enter your domain in the `Project website url` field
+
+### [3. Redirection](./3-redirection)
+**Readme:**
+
+[Replace a line with multiple lines with sed](https://alx-intranet.hbtn.io/rltoken/RRP9hX3MlQdABaKZD-Y_cA)
+*Configure your Nginx server so that `/redirect_me` is redirecting to another page.*
+
+**Requirements:**
+
+- [x] The redirection must be a “301 Moved Permanently”
+- [x] You answer file should be a Bash script containing commands to automatically configure a Ubuntu machine to respect above requirements
+- [x] Using what you did with `1-install_nginx_web_server`, write `3-redirection` so that it configures a brand new Ubuntu machine to the requirements asked in this task
