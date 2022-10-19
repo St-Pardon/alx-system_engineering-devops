@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Debug the issue with the web server
+sudo service apache2 start
