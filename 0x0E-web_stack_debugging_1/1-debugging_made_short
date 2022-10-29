@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # script to fix the nginx listening port and reloads the nginx master process
-sed -i 's/listen 8080/listen 80/g' /etc/nginx/sites-enabled/default
-sed -i 's/listen \[::\]:8080/listen \[::\]:80/g' /etc/nginx/sites-enabled/default
-"pgrep nginx -o > /run/nginx.pid\nnginx -s reload\necho '' > /run/nginx.pid"
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx start
+kill "$(pgrep 'nginx' | head -1)"
