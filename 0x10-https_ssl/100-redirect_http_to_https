@@ -43,7 +43,7 @@ frontend st-pardon.tech-frontend
         redirect scheme https code 301 if !{ ssl_fc }
         http-request set-header X-Forwarded-Proto http
         default_backend st-pardon.tech-backend
-frontend b3zaleel-alx.tech-https-frontend
+frontend st-pardon.tech-https-frontend
         bind *:443 ssl crt  /etc/letsencrypt/live/www.st-pardon.tech/fullchain.pem
         http-request set-header X-Forwarded-Proto https
         default_backend st-pardon.tech-backend
