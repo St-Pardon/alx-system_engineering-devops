@@ -4,3 +4,4 @@
 
 Read Blog Post at [medium](https://medium.com/@St-Pardon/what-happens-when-you-type-a-web-address-on-the-browser-and-press-enter-22eada6c9dc2)
 > Be sure to leave a like, a comment and follow up for more. Thank you
+🥇
