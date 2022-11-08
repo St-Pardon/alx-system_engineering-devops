@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Fixes the issue with the server
+# Fix this container so that Nginx is running as the nginx user.
 chmod 644 /etc/nginx/nginx.conf
 sed -Ei 's/\s*#?\s*user .*/user nginx;/' /etc/nginx/nginx.conf
 sed -Ei 's/(listen (\[::\]:)?80) /\180 /' /etc/nginx/sites-enabled/default
