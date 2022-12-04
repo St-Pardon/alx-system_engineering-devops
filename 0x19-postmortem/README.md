@@ -1,11 +1,12 @@
- # 0x19. Postmortem
+# 0x19. Postmortem
 
 ![](https://www.meme-arsenal.com/memes/e06b646269fbb79a05379b58976cb932.jpg)
 
 ## Issue Summary
+An expasnsion which lead to an updgrad to the codebase was initiated and launched a day before some tickets where opened on problems caused by the update. The ticket was openned for review and the attending officer investigated and confirm the issue which the engineering team were notified to trace the bug, after some wrong hunch the bug were discorved to be caused by a misspell in the data base model. This was corrected and new update was pushed. Damage was limited to under 3hrs from the time of detection. 
 
 ## Events Timeline
-- 04-12-2022 7:23 AM GMT+1 - A user opened a ticket that they couldn't sign in to their dashboard.
+- 04-12-2022 7:23 AM GMT+1 - Some users opened a ticket that they couldn't sign in to their dashboard.
 - 04-12-2022 8:12 AM GMT+1 - Murphy, a customer representative reviewed the ticket and tested it out to find the same issue.
 - 04-12-2022 8:25 AM GMT+1 - Murphy alerted the engineers and We investigated the controllers and the views for inconsistencies.
 - 04-12-2022 9:10 AM GMT+1 - We assumed the db schema/model being used was either at fault or used incorrectly after a recent update because the error message on console indicated that the model  was raising an error preventing proper communication with the database.
