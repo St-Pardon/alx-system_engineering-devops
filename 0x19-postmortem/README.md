@@ -1,23 +1,43 @@
 # 0x19. Postmortem
 
-![](https://www.meme-arsenal.com/memes/e06b646269fbb79a05379b58976cb932.jpg)
+![](https://alx-intranet.hbtn.io/images/challenge2022/get-started.jpg)
 
-## Issue Summary
-An expasnsion which lead to an updgrad to the codebase was initiated and launched a day before some tickets where opened on problems caused by the update. The ticket was openned for review and the attending officer investigated and confirm the issue which the engineering team were notified to trace the bug, after some wrong hunch the bug were discorved to be caused by a misspell in the data base model. This was corrected and new update was pushed. Damage was limited to under 3hrs from the time of detection. 
+## context
+Any software system will eventually fail, and that failure can come stem from a wide range of possible factors: bugs, traffic spikes, security issues, hardware failures, natural disasters, human error… Failing is normal and failing is actually a great opportunity to learn and improve. Any great Software Engineer must learn from his/her mistakes to make sure that they won’t happen again. Failing is fine, but failing twice because of the same issue is not.
 
-## Events Timeline
-- 04-12-2022 7:23 AM GMT+1 - Some users opened a ticket that they couldn't sign in to their dashboard.
-- 04-12-2022 8:12 AM GMT+1 - Murphy, a customer representative reviewed the ticket and tested it out to find the same issue.
-- 04-12-2022 8:25 AM GMT+1 - Murphy alerted the engineers and We investigated the controllers and the views for inconsistencies.
-- 04-12-2022 9:10 AM GMT+1 - We assumed the db schema/model being used was either at fault or used incorrectly after a recent update because the error message on console indicated that the model  was raising an error preventing proper communication with the database.
-- 04-12-2022 9:35 AM GMT+1 - We checked that the views might not be validating the form fields the right way to satisfy the model requiremets, but eventually wasn't the cause.
-- 04-12-2022 9:52 AM GMT+1 - The engineering team eventually found a mispell in the last built that was shipped out and made the corrections.
-- 04-12-2022 10:05 AM GMT+1 - Everything eventually returned back to normal.
+A postmortem is a tool widely used in the tech industry. After any outage, the team(s) in charge of the system will write a summary that has 2 main goals:
 
-## Root Cause And Resolution
-The redeveloped model for the database migration had an error from a day earlier possibly from a code review, which eventually caused the error that prevented the users from gaining access into their dashboards. Eventually the engineering team was able to trace the bug to the database model set up and the misspell was corrected and the issue was resolved.
+- To provide the rest of the company’s employees easy access to information detailing the cause of the outage. Often outages can have a huge impact on a company, so managers and executives have to understand what happened and how it will impact their work.
+- And to ensure that the root cause(s) of the outage has been discovered and that measures are taken to make sure it will be fixed.
 
-## Corrective And Preventative Measures
-- Setup a continuous integration pipeline to run a build on each pull request branch. This would ensure that builds are passing in the pull request branch before it is merged with the deployment branch.
-- Setup a monitoring system for the database and application servers to keep track of any issue that may occur.
-- Develop tests that need to be passed for each new feature and those tests should be passing before they are merged with the deployment branch.
+## Tasks
+# 0. My first postmortem
+![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/294/pQ9YzVY.gif)
+Using one of the web stack debugging project issue or an outage you have personally face, write a postmortem. Most of you will never have faced an outage, so just get creative and invent your own :)
+**Requirements:**
+
+- Issue Summary (that is often what executives will read) must contain:
+  - duration of the outage with start and end times (including timezone)
+  - what was the impact (what service was down/slow? What were user experiencing? How many % of the users were affected?)
+  - what was the root cause
+- Timeline (format bullet point, format: time - keep it short, 1 or 2 sentences) must contain:
+
+  - when was the issue detected
+  - how was the issue detected (monitoring alert, an engineer noticed something, a customer complained…)
+  - actions taken (what parts of the system were investigated, what were the assumption on the root cause of the issue)
+  - misleading investigation/debugging paths that were taken
+  - which team/individuals was the incident escalated to
+  - how the incident was resolved
+- Root cause and resolution must contain:
+
+  - explain in detail what was causing the issue
+  - explain in detail how the issue was fixed
+- Corrective and preventative measures must contain:
+
+  - what are the things that can be improved/fixed (broadly speaking)
+  - a list of tasks to address the issue (be very specific, like a TODO, example: patch Nginx server, add monitoring on server memory…)
+- Be brief and straight to the point, between 400 to 600 words
+
+While postmortem format can vary, stick to this one so that you can get properly reviewed by your peers.
+
+Please, remember that these blogs must be written in English to further your technical ability in a variety of settings.
